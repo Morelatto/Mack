@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<title> Punk Blog </title>
+<style>
+span.reference{
+	position:fixed;
+	left:10px;
+	bottom:10px;
+	font-size:12px;
+				}
+span.reference a{
+	color:#aaa;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #000;
+	margin-right:30px;
+				}
+span.reference a:hover{
+	color:#ddd;
+					}
+ul.sdt_menu{
+	margin-left:15%;
+	margin-top:18%;
+			}
+</style>
+
+<style>
+#slideshow { 
+margin: 50px auto; 
+position: relative; 
+width: 240px; 
+height: 240px; 
+padding: 10px; 
+box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+position: absolute; 
+top: 10px; 
+left: 10px; 
+right: 10px; 
+bottom: 10px; 
+margin-top:29%;
+margin-left:-91%; 
+z-index: -1;
+}
+</style>
+</head>
+<body>
+<header>
+<div>
+<img id="BackgroundTitulo" src="Imagem\BackgroundTitulo.jpg" alt="BackgroundTitulo" height="200">
+<img id="LogoAnarquia1" src="Imagem\LogoAnarquia.png" alt="LogoAnarquia1" width="150" height="150">
+<a href="index.html"><img id="Titulo" src="Imagem\Titulo.png" alt="Titulo"></a>
+<img id="LogoAnarquia2" src="Imagem\LogoAnarquia.png" alt="LogoAnarquia2" width="150" height="150">
+</div>
+</header>
+<div class="content">
+		<ul id="sdt_menu" class="sdt_menu">
+			<li>
+				<a href="index.html">
+					<img src="Imagem/2.jpeg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Home</span>
+						<span class="sdt_descr">Viva Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="musica.html">
+					<img src="Imagem/1.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Música</span>
+						<span class="sdt_descr">Ouça Punk Rock!</span>
+					</span>
+				</a>
+				<div class="sdt_box">
+						<a href="#">Bandas</a>
+						<a href="#">Gêneros</a>
+						<a href="#">História</a>
+				</div>
+			</li>
+			<li>
+				<a href="video.html">
+					<img src="Imagem/3.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Vídeo</span>
+						<span class="sdt_descr">Assista Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="galeria.html">
+					<img src="Imagem/4.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Galeria</span>
+						<span class="sdt_descr">Veja Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="show.html">
+					<img src="Imagem/5.jpeg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Shows</span>
+						<span class="sdt_descr">Presencie Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="contato.html">
+					<img src="Imagem/6.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Contato</span>
+						<span class="sdt_descr">Nos mostre Punk Rock!</span>
+					</span>
+				</a>
+				<div class="sdt_box">
+					<a href="#">Mande sua Banda</a>
+					<a href="#">Mande uma sugestão</a>
+					<a href="#">Informe um problema</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#sdt_menu > li').bind('mouseenter',function(){
+				var $elem = $(this);
+				$elem.find('img')
+					 .stop(true)
+					 .animate({
+						'width':'170px',
+						'height':'170px',
+						'left':'0px'
+					 },400,'easeOutBack')
+					 .andSelf()
+					 .find('.sdt_wrap')
+					 .stop(true)
+					 .animate({'top':'140px'},500,'easeOutBack')
+					 .andSelf()
+					 .find('.sdt_active')
+					 .stop(true)
+					 .animate({'height':'170px'},300,function(){
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length){
+						var left = '170px';
+						if($elem.parent().children().length == $elem.index()+1)
+							left = '-170px';
+						$sub_menu.show().animate({'left':left},200);
+					}	
+				});
+			}).bind('mouseleave',function(){
+				var $elem = $(this);
+				var $sub_menu = $elem.find('.sdt_box');
+				if($sub_menu.length)
+					$sub_menu.hide().css('left','0px');
+				
+				$elem.find('.sdt_active')
+					 .stop(true)
+					 .animate({'height':'0px'},300)
+					 .andSelf().find('img')
+					 .stop(true)
+					 .animate({
+						'width':'0px',
+						'height':'0px',
+						'left':'85px'},400)
+					 .andSelf()
+					 .find('.sdt_wrap')
+					 .stop(true)
+					 .animate({'top':'25px'},500);
+			});
+		});
+	</script>
+
+
+<div id="slideshow">
+<div>
+<img id="SexPistols" src="Imagem\SexPistols.jpg" alt="SexPistols" width="1020" height="368">
+</div>
+<div>
+<img id="TheClash" src="Imagem\TheClash.jpg" alt="TheClash" width="1020" height="368">
+</div>
+  <div>
+<img id="MC5" src="Imagem\MC5.jpg" alt="MC5" width="1020" height="368">
+</div>
+<div>
+<img id="Ramones" src="Imagem\Ramones.jpg" alt="Ramones" width="1020" height="368">
+</div>
+  <div>
+<img id="BlackFlag" src="Imagem\BlackFlag.jpg" alt="BlackFlag" width="1020" height="368">
+</div>
+<div>
+<img id="Misfits" src="Imagem\Misfits.jpg" alt="Misfits" width="1020" height="368">
+</div>
+
+</div>
+<script>
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+$('#slideshow > div:first')
+.fadeOut(1000)
+.next()
+.fadeIn(1000)
+.end()
+.appendTo('#slideshow');
+},  3000);
+</script>
+</div>
+</div>
+<div id="Conteudo">
+	<ul>
+		<li>
+			<a href="https://www.youtube.com/watch?v=v8Pf1jwMCuo">
+			<img src="Imagem/Fugazi.jpg" width="210" height="171"></a>
+			<h2>Fugazi</h2>
+			<p align="justify">
+				In On The Kill Taker é o terceiro álbum da banda Americana de Post-Hardcore e Art Punk Fugazi. Foi lançado em 30 de Junho de 1993, pela Dischord Recordsa gravado em Inner Ear Studios. Produzido por Tec Niceley e Don Zientara, In On The Kill Taker capturou a agressividade dos lançamentos anteriores da banda, ainda demonstrando um alcançe mais variado de influências.					
+			</p>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=mXt4GJ8hYqU">
+			<img src="Imagem/ChokingVictim.jpg" width="210" height="171"></a>
+			<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspChoking Victim</h2>
+			<p align="justify">
+				No Gods, No Managers é o único álbum da banda Americana	de Hardcore Punk Choking Victim. Sendo o único álbum da banda que terminou imediatamente após a gravação, se tornou muito popular na cena Punk. O tema do álbum é pessimista e negativo, com letras e arte contendo imagens Satânicas. A capa não contém um código de barras, principalmente pela forte mensagem anti-capitalista da banda.		
+			</p>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=ljeJMJX95lU">
+			<img src="Imagem/ManIsTheBastard.jpg" width="210" height="171"></a>
+			<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMan Is The Bastard</h2>
+			<p align="justify">
+				Man Is The Bastard foi uma banda Americana pioneira no subgênero Power Violence do Hardcore Punk. Baseada em Claremont, California a banda existiu de 1990 até 1997, lançando muitas discos em vinil por gravadoras obscuras pelo mundo.	
+			</p>
+		</li>
+		<li>
+			<a href="https://www.youtube.com/watch?v=tVCk0XWKtbM">
+			<img src="Imagem/Minutemen.jpg" width="210" height="171"></a>
+			<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMinutemen</h2>
+			<p align="justify">
+				Double Nickels On The Dime é o terceiro álbum de estúdio do trio Americano Minutemen, lançado pela gravadora independente SST Records em 1984. Combina elementos do Punk Rock, Funk, Country, Spoken Word e Jazz, possui 45 músicas e trata sobre uma grande variedade de temas, da guerra do Vietnam e racismo na América, para a classe trabalhadora e linguística.				</p>
+		</li>
+	</ul>
+	<div>
+		<div class="featured">
+			<h2 id="Significado">Significado</h2>
+			<h3 id="Significado1" align="center">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspO QUE É PUNK ROCK</h3>
+			<p align="justify">
+			<img id="DeadKennedys" src="Imagem/DeadKennedys.png" alt="TheExploited">
+			Foi um estilo musical criado na década de 70 e a cultura ao redor dele. Surgiu em Nova York a partir de 1974, quando os frequentadores da casa de shows CBGB e da cena underground local (usuários de drogas, poetas de rua, transsexuais e outros) formaram e apoiaram bandas que se opunham ao pomposo rock progressivo de bandas como Yes, que faziam muito sucesso na época. 
+			</p>
+			<p align="justify">
+							<img id="TheClash" src="Imagem/TheClash.png" alt="TheClash">
+			No Reino Unido, especialmente em Londres, o movimento ganhou versão própria, com bandas icônicas como Sex Pistols e The Clash. Por lá, o surgimento do punk coincidiu com um momento político delicado, o que contribuiu para que muitas bandas criticassem o governo em suas músicas. No começo dos anos 80, o gênero deu lugar à new wave e ao pós-punk como estilos predominantes de rock.				
+		</p>
+		</div>
+		<div class="section">
+			<div class="article">
+				<h2 id="Frases">Frases</h2>
+				<p align="justify">
+			Undermine their pompous authority, reject their moral standards, make anarchy and disorder your trademarks. Cause as much chaos and disruption as possible but don't let them take you alive.
+		</p>
+				<a href="https://www.youtube.com/watch?v=rDyb_alTkMQ">Sid Vicious</a>
+				<p align="justify">
+			Punk is not dead. Punk will onliy die when corporations can exploit and mass produce it.
+			</p>
+				<a href="https://www.youtube.com/watch?v=eIqESwzCGg4">Jello Biafra</a>
+			</div>
+			<div class="newsletter">
+				<img src="Imagem/Sid.png" alt="Sid">
+<iframe width="277" height="236"
+src="http://www.youtube.com/embed/dtUH2YSFlVU?autoplay=1">
+</iframe>			
+</div>
+</div>	
+</div>		
+</div>
+<footer>
+<div id="Footer">
+<p>
+LUÍS TESSARO | PEDRO MORELATTO @ TODOS OS DIREITOS RESERVADOS.
+</p>
+</div>
+</footer>
+</body>
+
+</html>

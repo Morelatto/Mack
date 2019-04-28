@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+	<title>Punk Blog</title>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="container">
+	<header>
+		<a href='index.html'><img src="img\banner.jpg" alt="punk_LOGO"/></a>
+	</header>
+	
+	<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='index.html'><span>Home</span></a></li>
+   <li class='has-sub'><a href='sobre.html'><span>Informações</span></a></li>
+   <li class='has-sub'><a href="bandas.html"><span>Bandas</span></a>
+      <ul>
+         <li class='last'><a href='misfits.html'><span>Misfits</span></a></li>
+         <li class='last'><a href='ramones.html'><span>Ramones</span></a></li>
+         <li class='last'><a href='clash.html'><span>The Clash</span></a></li>
+         <li class='last'><a href='sexpistols.html'><span>Sex Pistols</span></a></li>
+         <li class='last'><a href='newyork.html'><span>New York Dolls</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href='contato.html'><span>Contato</span></a></li>
+</ul>
+</div>
+
+	<nav id="lateral">
+		<ul>
+			<li><a href='historia.html'>História do Punk</a></li>
+			</br>
+			</br>
+			<li><a href='punkbr.html'>Punk no Brasil</a></li>
+			</br>
+			</br>
+			<li><a href='subgeneros.html'>Subgêneros do punk rock</a></li>	
+			</br>
+			</br>
+			<li><a href='linhadotempo.html'>Linha do Tempo</a></li>
+			</br>
+			</br>
+			<li><a href='cultura.html'>Cultura Punk</a></li>
+		</ul>
+	</nav>
+	
+	<section id="CONTEUDO">
+	
+			<form method="POST" action="create.php">
+				Nome:<input type="text" name="nome"></br>
+				Nome da Banda:<input type="text" name="nomeBanda"></br>
+				Género: <select name="genero"> 
+				<option value="Anarco Punk">Anarco Punk</option> 
+				<option value="Post-Punk">Post-Punk</option> 
+				<option value="Ska Punk">Ska Punk</option> 
+				</select></br>
+				<input type='submit' value='Enviar'/>	
+			</form>		
+			
+			<br>
+			<br>
+			
+			<form action="update.php">
+				Nome:<input type="text" name="nome"></br>
+				Nome da Banda:<input type="text" name="nomeBanda"></br>
+				<input type='submit' value='Tocar no da Banda'/>	
+			</form>	
+			<br>
+			<br>
+			
+			<form action="delete.php">
+				Nome do líder da banda:<input type="text" name="nome"></br>
+				<input type='submit' value='Deletar Bandas'/>	
+			</form>	
+			<br>
+			<br>
+			<br>
+			<form action="read.php">
+				<input type='submit' value='Ver Bandas'/>	
+			</form>	
+		
+	</section>
+	
+		<footer>
+		<p>___________________________________________________________________________________________________________________________________________________________</p>
+			<a href="contato.html">Todos direitos reservados a: Luís Tessaro e Pedro Morelatto</a>
+		</footer>
+	
+	
+</div>
+	
+	
+</body>
+
+</html>

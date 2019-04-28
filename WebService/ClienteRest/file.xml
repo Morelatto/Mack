@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ordem>
+<cliente>
+<id>200</id>
+<nome>Mack Cliente</nome>
+</cliente>
+<descricao>Mack Ordem</descricao>
+<id>500</id>
+</ordem>

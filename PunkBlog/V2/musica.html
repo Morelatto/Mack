@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/style2.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+		<script src="js/jquery-1.6.3.min.js" type="text/javascript"></script>
+		<script src="js/cufon-yui.js" type="text/javascript"></script>
+		<script src="js/cufon-replace.js" type="text/javascript"></script>
+		<script src="js/Vegur_700.font.js" type="text/javascript"></script>
+		<script src="js/Vegur_400.font.js" type="text/javascript"></script> 
+		<script src="js/FF-cash.js" type="text/javascript"></script> 
+		<script src="js/script.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/easyTooltip.js"></script>	
+<link rel="stylesheet" type="text/css" href="CSS.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<title> Punk Blog </title>
+<style>
+span.reference{
+	position:fixed;
+	left:10px;
+	bottom:10px;
+	font-size:12px;
+				}
+span.reference a{
+	color:#aaa;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #000;
+	margin-right:30px;
+				}
+span.reference a:hover{
+	color:#ddd;
+					}
+ul.sdt_menu{
+	margin-left:15%;
+	margin-top:18%;
+			}
+</style>
+
+</head>
+<body>
+<header>
+<div>
+<img id="BackgroundTitulo" src="Imagem\BackgroundTitulo.jpg" alt="BackgroundTitulo" height="200">
+<img id="LogoAnarquia1" src="Imagem\LogoAnarquia.png" alt="LogoAnarquia1" width="150" height="150">
+<a href="index.html"><img id="Titulo" src="Imagem\Titulo.png" alt="Titulo"></a>
+<img id="LogoAnarquia2" src="Imagem\LogoAnarquia.png" alt="LogoAnarquia2" width="150" height="150">
+</div>
+</header>
+<div class="content2">
+		<ul id="sdt_menu" class="sdt_menu" style="margin-left: 16%;margin-top: 0%;">
+			<li>
+				<a href="index.html">
+					<img src="Imagem/2.jpeg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Home</span>
+						<span class="sdt_descr">Viva Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="musica.html">
+					<img src="Imagem/1.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Música</span>
+						<span class="sdt_descr">Ouça Punk Rock!</span>
+					</span>
+				</a>
+				<div class="sdt_box">
+						<a href="#">Bandas</a>
+						<a href="#">Gêneros</a>
+						<a href="#">História</a>
+				</div>
+			</li>
+			<li>
+				<a href="video.html">
+					<img src="Imagem/3.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Vídeo</span>
+						<span class="sdt_descr">Assista Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="galeria.html">
+					<img src="Imagem/4.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Galeria</span>
+						<span class="sdt_descr">Veja Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="show.html">
+					<img src="Imagem/5.jpeg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Shows</span>
+						<span class="sdt_descr">Presencie Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="contato.html">
+					<img src="Imagem/6.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Contato</span>
+						<span class="sdt_descr">Nos mostre Punk Rock!</span>
+					</span>
+				</a>
+				<div class="sdt_box">
+					<a href="#">Mande sua Banda</a>
+					<a href="#">Mande uma sugestão</a>
+					<a href="#">Informe um problema</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#sdt_menu > li').bind('mouseenter',function(){
+				var $elem = $(this);
+				$elem.find('img')
+					 .stop(true)
+					 .animate({
+						'width':'170px',
+						'height':'170px',
+						'left':'0px'
+					 },400,'easeOutBack')
+					 .andSelf()
+					 .find('.sdt_wrap')
+					 .stop(true)
+					 .animate({'top':'140px'},500,'easeOutBack')
+					 .andSelf()
+					 .find('.sdt_active')
+					 .stop(true)
+					 .animate({'height':'170px'},300,function(){
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length){
+						var left = '170px';
+						if($elem.parent().children().length == $elem.index()+1)
+							left = '-170px';
+						$sub_menu.show().animate({'left':left},200);
+					}	
+				});
+			}).bind('mouseleave',function(){
+				var $elem = $(this);
+				var $sub_menu = $elem.find('.sdt_box');
+				if($sub_menu.length)
+					$sub_menu.hide().css('left','0px');
+				
+				$elem.find('.sdt_active')
+					 .stop(true)
+					 .animate({'height':'0px'},300)
+					 .andSelf().find('img')
+					 .stop(true)
+					 .animate({
+						'width':'0px',
+						'height':'0px',
+						'left':'85px'},400)
+					 .andSelf()
+					 .find('.sdt_wrap')
+					 .stop(true)
+					 .animate({'top':'25px'},500);
+			});
+		});
+	</script>
+	<section id="content">
+				<div class="main">
+					<div class="content-padding-2">
+						<div class="container_12">
+							<div class="wrapper">
+								<div class="grid_12">
+									<div class="padding-grid-1">
+										<img src="Imagem/MusicaTitulo.png" alt=""" style="position:relative; z-index:-1;"/>
+									</div>
+									<div class="wrapper p3">
+										<article class="grid_4 alpha">
+											<div class="padding-grid-2">
+												<div class="wrapper">
+													<figure class="style-img-2 fleft"><a href="https://www.youtube.com/watch?v=U3VXiyS6zl0"><img src="Imagem/FreshFruitForRottingVegetables.jpg"  width="310px" height="310px" alt=""></a></figure>
+												</div>
+											</div>
+										</article>
+										<article class="grid_8 alpha">
+											<div class="padding-grid-2">
+												<h4 class="margin-none indent-top1"><strong>1980</strong>  Dead Kennedys - Fresh Fruit For Rotting Vegetables</h4>
+												<p class="prev-indent-bot" align="justify">Fresh Fruit for Rotting Vegetables é o álbum de estreia da banda punk estadunidense Dead Kennedys, lançado inicialmente em setembro de 1980 no Reino Unido pela gravadora Cherry Red Records e é considerado até hoje um dos maiores clássicos não só do punk americano, mas também mundial. A capa do álbum mostra vários carros de polícia sendo incendiados, mostrando o "White Night Riots" que ocorreu em 27 de novembro de 1978, data em que o ex-supervisor de San Francisco Dan White, assassinou o prefeito George Moscone e Supervisor Harvey Milk.1.
+												<div class="wrapper">
+													<ul class="list-1 fleft">
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#1">01 Kill The Poor</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#2">02 Forward To Death</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#3">03 When Ya Get Drafted</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#4">04 Let's Lynch The Landlord</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#5">05 Drug Me</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#6">06 Your Emotions</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#7">07 Chemical Warfare</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#8">08 California Über Alles</a></li>
+														<div style="margin-left: 137%; margin-top: -98%; float: left; width:159px">
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#9">09 I Kill Children</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#10">10 Stealing Peoples' Mail</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#11">11 Funland At The Beach</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#12">12 Ill In The Head</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#13">13 Holiday In Cambodia</a></li>
+														<li><a href="http://www.deadkennedys.com/albums_fresh.html#14">14 Viva Las Vegas</a></li>
+														</div>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="wrapper p3">
+										<article class="grid_4 alpha">
+											<div class="padding-grid-2">
+												<div class="wrapper">
+													<figure class="style-img-2 fleft"><a href="https://www.youtube.com/watch?v=JaBXx5lOipw"><img src="Imagem/...AndOutComeTheWolves.jpg"  width="310px" height="310px" alt=""></a></figure>
+												</div>
+											</div>
+										</article>
+										<article class="grid_8 alpha">
+											<div class="padding-grid-2">
+												<h4 class="margin-none indent-top1"><strong>1995</strong> Rancid - ... And Out Came The Wolves</h4>
+												<p class="prev-indent-bot" align="justify">...And Out Come the Wolves é o terceiro álbum de estúdio da banda estadunidense de punk rock Rancid. Ele foi lançado em 22 de agosto de 1995 pelo selo independente Epitaph. O disco possui canções com fortes influências de ska, que remontam à banda Operation Ivy, que Tim Armstrong (vocalista e guitarrista) tinha com Matt Freeman (baixista). Este álbum, junto com Dookie (Green Day) e Smash (The Offspring), são creditados como responsáveis por reviver o interesse popular no punk rock na década de 1990, sinalizando uma nova onda de bandas com estilo baseado no punk.
+									<div class="wrapper">
+													<ul class="list-1 fleft">
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/maxwellmurder.html">01 Maxwell Murder</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/the11thhour.html">02 The 11th Hour</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/rootsradicals.html">03 Roots Radicals</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/timebomb.html">04 Time Bomb</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/olympiawa.html">05 Olympia WA.</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/lockstepgone.html">06 Lock, Step & Gone</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/junkieman.html">07 Junkie Man</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/listedmia.html">08 Listed M.I.A.</a></li>
+														<div style="margin-left: 70%; margin-top: -50%; float: left; width:159px">
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/rubysoho.html">09 Ruby Soho</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/dalycitytrain.html">10 Daily City Train</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/journeytotheendoftheeastbay.html">11 Journey To The End Of The East Bay</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/shesautomatic.html">12 She's Automatic</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/oldfriend.html">13 Old Friend</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/disorderdisarray.html">14 Disorder And Disarray</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/thewarsend.html">15 The Wars End</a></li>
+														</div>
+														<div style="margin-left: 141%; margin-top: -57%; float: left; width:159px">
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/youdontcarenothin.html">16 You Don't Care Nothin'</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/aswicked.html">17 As Wicked</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/avenuesalleyways.html">18 Avenues & Alleyways</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/rancid/thewayifeel.html">19 The Way I Feel</a></li>
+														</div>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="wrapper">
+										<article class="grid_4 alpha">
+											<div class="padding-grid-2">
+												<div class="wrapper">
+													<figure class="style-img-2 fleft"><a href="https://www.youtube.com/watch?v=om6ho37eSYE"><img src="Imagem/Damaged.jpg" width="310px" height="310px" alt=""></a></figure>
+												</div>
+											</div>
+										</article>
+										<article class="grid_8 alpha">
+											<div class="padding-grid-2">
+												<h4 class="margin-none indent-top1"><strong>1981</strong> Black Flag - Damaged</h4>
+												<p class="prev-indent-bot" align="justify">Damaged é o primeiro álbum do Black Flag, uma banda estadunidense de hardcore punk. O álbum foi lançado em dezembro de 1981 pela SST Records. Ele é considerado um grande clássico da era e também um marco na carreira do Black Flag. Em 2003, na lista da Rolling Stone dos "500 Melhores Álbuns de Todos os Tempos", o álbum ficou em 340º lugar. A capa do ábum, uma fotografia tirada por Ed Colver, um fotógrafo punk, mostra Henry Rollins dando um murro em um espelho. O efeito foi feito batendo um martelo contra o espelho, para que o vidro se despedaçasse, e o "sangue" na mão de Henry é apenas uma mistura de tinta vermelha e café.</p>
+												<div class="wrapper">
+													<ul class="list-1 fleft">
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/riseabove.html">01 Rise Above</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/spraypaintthewalls.html">02 Spray Paint (The Walls)</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/sixpack.html">03 Six Pac</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/whatisee.html">04 What I See</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/tvparty.html">05 TV Party</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/thirstyandmiserable.html">06 Thirsty And Miserable</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/policestory.html">07 Police Story</a></li>
+														<div style="margin-left: 73%; margin-top: -44%; float: left; width:159px">
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/gimmegimmegimme.html">08 Gimmie Gimmie Gimmie</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/depression.html">09 Depression</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/room13.html">10 Room 13</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/damagedii.html">11 Damaged II</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/nomore.html">12 No More</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/paddedcell.html">13 Padded Cell</a></li>
+														</div>
+														<div style="margin-left: 145%; margin-top: -44%; float: left; width:159px">
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/lifeofpain.html">14 Life Of Pain</a></li>
+														<li><a href="http://www.azlyrics.com/lyrics/blackflag/damagedi.html">15 Damaged I</a></li>
+														</div>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	
+<footer>
+<div id="Footer">
+<p>
+LUÍS TESSARO | PEDRO MORELATTO @ TODOS OS DIREITOS RESERVADOS.
+</p>
+</div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,591 @@
+body{
+background-color: black;
+position: absolute;
+}
+
+#BackgroundTitulo{
+position: absolute;
+margin-left:-9%;
+margin-top:-2%;
+}
+
+#LogoAnarquia1{
+position: absolute;
+margin-left:36%;
+top:1%;
+}
+
+#Titulo{
+position: absolute;
+top:1%;
+margin-left:50%;
+}
+
+#LogoAnarquia2{
+position: absolute;
+margin-left:85%;
+top:1%;
+}
+
+#Conteudo {
+	margin: 0 auto;
+	min-height: 812px;
+	padding: 20px 0 50px;
+	width: 960px;
+	margin-left:17%%;
+	margin-top: 19%;
+}
+#Conteudo > ul {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+#Conteudo > ul li {
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+	width: 220px;
+}
+#Conteudo > ul li > a {
+	background: url(../images/frame.png) no-repeat center top;
+	display: block;
+	margin: 0;
+	padding: 5px 5px 29px;
+}
+#Conteudo > ul li > a:hover {
+	opacity: 0.9;
+}
+#Conteudo > ul li > a img {
+	border: 3px ridge red;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#Conteudo > ul li > h2{
+margin-top: 83%;
+margin-left: 21%;
+color: white;
+}
+
+#Conteudo > ul li b {
+	color: #000;
+	display: block;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px 0 5px;
+	text-transform: capitalize;
+}
+#Conteudo > ul li p {
+	color: white;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	margin-top: 8%
+}
+
+#Conteudo > ul li p a {
+	color: #464646;
+	text-decoration: underline;
+}
+#Conteudo > ul li p a:hover {
+	color: #252525;
+}
+#Conteudo > div {
+	margin: 0;
+	overflow: hidden;
+	padding: 50px 0 0;
+}
+#Conteudo > .more {
+	color: #464646;
+	display: block;
+	font-size: 13px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	text-decoration: underline;
+	text-transform: capitalize;
+	width: 80px;
+}
+#Conteudo > .more:hover {
+	color: #4a8b92;
+}
+#Conteudo h2 {
+	color: #fff;
+	font-family: 'Comfortaa-Regular';
+	font-size: 20px;
+	font-weight: normal;
+	height: 47px;
+	letter-spacing: 0.1em;
+	left: 15px;
+	line-height: 47px;
+	margin: 0;
+	padding: 0 25px;
+	position: absolute;
+	text-transform: capitalize;
+	top: -14px;
+}
+
+#Conteudo div .featured #Significado{
+	background: url(Imagem/BackgroundDefinicao.png) repeat-x;
+}
+#Conteudo div .article #Frases{
+	background: url(Imagem/BackgroundDefinicao.png) repeat-x;
+}
+
+#Conteudo div .featured #Significado1{
+color: white;
+font-family: 'Rockwell Extra Bold', 'Rockwell Bold', monospace;
+}
+
+#Conteudo h3 {
+	color: #2f394e;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+	padding: 25px 10px 40px;
+	text-transform: capitalize;
+}
+#Conteudo > b {
+	color: #2f394e;
+	display: inline-block;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+#Conteudo > p {
+	color: #464646;
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+	padding: 30px 10px;
+}
+#Conteudo > p a {
+	color: #464646;
+	text-decoration: underline;
+}
+#Conteudo > p a:hover {
+	color: #252525;
+}
+#Conteudo div div {
+	float: left;
+	margin: 0 10px;
+	padding: 0;
+}
+#Conteudo div .featured {
+	background: url(Imagem/BackgroundDefinicao2-1.jpg);
+	border: 5px solid #3D4243;
+	border-radius: 4px;
+	min-height: 450px;
+	padding: 45px 15px 15px;
+	position: relative;
+	width: 420px;
+	font-family: ‘American Typewriter’, ‘Courier New’, Courier, Monaco, mono;
+}
+#Conteudo div .featured h2 {
+	text-align: center;
+}
+#Conteudo div .featured h3 {
+	color: #354057;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px 0 0;
+	text-transform: none;
+}
+#Conteudo div .featured  #DeadKennedys {
+	width: 101px;
+	height: 127px;
+	display: block;
+	float: left;
+	margin: 10px 10px 0px 0;
+	padding: 0;
+}
+#Conteudo div .featured  #TheClash {
+	width: 191px;
+	height: 121px;
+	display: block;
+	float: right;
+	margin: 0px -3px -1px 10px;
+	padding: 0;
+} 
+#Conteudo div .featured p {
+	clear: both;
+	color: white;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 6 0 24px;
+	padding: 0;
+}
+#Conteudo div .featured p a {
+	color: #464646;
+}
+#Conteudo div .featured p a:hover {
+	color: #252525;
+}
+#Conteudo div .section {
+	width: 460px;
+}
+#Conteudo div .section div {
+	background: url('Imagem/BackgroundDefinicao2-2.jpg');
+	border: 5px solid #3D4243;
+	border-radius: 4px;
+	float: none;
+	margin: 0;
+	padding: 0 15px;
+	position: relative;
+}
+#Conteudo div .section .article {
+	height: 183px;
+	margin-bottom: 25px;
+	padding: 55px 15px 20px;
+	text-align: right;
+}
+#Conteudo div .section .article h2 {
+	text-align: left;
+}
+#Conteudo div .section .article h2 a {
+	background: url(../images/icons.png) no-repeat 0 10px;
+	display: inline-block;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	text-indent: -99999px;
+	width: 31px;
+}
+#Conteudo div .section .article p {
+	font-family: ‘American Typewriter’, ‘Courier New’, Courier, Monaco, mono;
+	color: #f5f5f5;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0px 0px;
+}
+#Conteudo div .section .article p a {
+	color: #f5f5f5;
+	text-decoration: underline;
+}
+#Conteudo div .section .article p a:hover {
+	color: #FF1A1A;
+}
+#Conteudo div .section .article > a {
+	color: #f5f5f5;
+	font-size: 18px;
+	text-decoration: none;
+}
+#Conteudo div .section .article > a:hover {
+	color: #FF1A1A;
+}
+#Conteudo div .section .newsletter {
+	height: 168px;
+	padding: 81px 15px 19px 214px;
+	position: relative;
+	background-image: url(Imagem/BackgroundDefinicao2-3.jpg);
+}
+#Conteudo div .section .newsletter img {
+	height:283px;
+	display: block;
+	left: -37px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: -13px;
+	z-index: 5;
+}
+#Conteudo div .section .newsletter iframe {
+margin-left:-28%;
+margin-top:-31%;
+}
+
+#Conteudo div .section .newsletter p {
+	color: #f5f5f5;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+}
+#Conteudo div .section .newsletter p span {
+	display: block;
+}
+#Conteudo div .section .newsletter form {
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+#Conteudo div .section .newsletter form span {
+	color: #f5f5f5;
+	clear: both;
+	display: block;
+	font-size: 14px;
+	letter-spacing: 0.01em;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 0 4px;
+	text-transform: capitalize;
+	text-shadow: 0 -1px 0 #285f62;
+}
+#Conteudo div .section .newsletter form input {
+	background: url(../images/interface.png) no-repeat;
+	border: 0;
+	display: block;
+	float: left;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+#Conteudo div .section .newsletter form #email {
+	background-position: -399px -72px;
+	color: #68a7aa;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	line-height: 30px;
+	padding: 0 5px;
+	text-align: center;
+	width: 130px;
+}
+#Conteudo div .section .newsletter form #send {
+	background-position: -399px -110px;
+	text-indent: -99999px;
+	width: 80px;
+}
+#Conteudo > .article {
+	margin: 0;
+	padding: 0;
+}
+#Conteudo > .article b {
+	color: #2f394e;
+	display: inline-block;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 10px 15px;
+	text-transform: capitalize;
+}
+#Conteudo > .article p {
+	color: #464646;
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0 10px;
+}
+#Conteudo > .article p a {
+	color: #464646;
+	text-decoration: underline;
+}
+#Conteudo > .article p a:hover {
+	color: #252525;
+}
+#Conteudo > .article ul {
+	margin: 0;
+	padding: 30px 0 30px 10px;
+}
+#Conteudo > .article ul li {
+	color: #464646;
+	line-height: 24px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#Conteudo > .article ul li a {
+	color: #464646;
+	text-decoration: none;
+}
+#Conteudo > .article ul li a:hover {
+	color: #252525;
+}
+#Conteudo > .article h3 {
+	padding-bottom: 20px;
+}
+#Conteudo .blog {
+	padding: 0;
+}
+#Conteudo .content {
+	float: left;
+	margin: 0 35px 0 10px;
+	padding: 0;
+	width: 585px;
+}
+#Conteudo .content h3 {
+	padding-bottom: 25px;
+	padding-left: 0;
+}
+#Conteudo .content p {
+	color: #464646;
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0 0 24px;
+}
+#Conteudo .content p a {
+	color: #464646;
+	text-decoration: underline;
+}
+#Conteudo .content p a:hover {
+	color: #252525;
+}
+#Conteudo .sidebar {
+	background: url(../images/bg-sidebar.jpg) repeat-y top left;
+	float: right;
+	margin: 0 10px 82px 0;
+	padding: 0;
+	width: 320px;
+}
+#Conteudo .sidebar h3 {
+	background: url(../images/bg-sidebar-heading.jpg) no-repeat 0 0;
+	color: #2f394e;
+	font-family: 'Comfortaa-Regular';
+	font-size: 20px;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	margin: 0;
+	padding: 25px 10px;
+	text-align: center;
+	text-transform: capitalize;
+}
+#Conteudo .sidebar ul {
+	background: url(../images/bg-sidebar-footer.jpg) no-repeat bottom left;
+	margin: 0;
+	padding: 0 20px 50px;
+}
+#Conteudo .sidebar ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 24px;
+}
+#Conteudo .sidebar ul li span {
+	color: #2f394e;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+}
+#Conteudo.sidebar ul li span a {
+	color: #2f394e;
+	text-decoration: none;
+}
+#Conteudo .sidebar ul li span a:hover {
+	color: #4c8f97;
+}
+#Conteudo .sidebar ul li p {
+	color: #000;
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+}
+#Conteudo .sidebar ul li p a {
+	color: #000;
+	text-decoration: underline;
+}
+#Conteudo .sidebar ul li p a:hover {
+	color: #4c8f97;
+}
+#Footer{
+    background: url("Imagem/LogoAnarquia2.jpg");
+    background-size: 6%;
+    background-repeat: repeat-x;
+	padding: 20px 50px;
+	margin-left: 13%;
+	margin-right: -15%;
+	margin-top: -3%;
+}
+
+#Footer p{
+	color: white;
+	font-family: Impact, Charcoal, sans-serif;
+	letter-spacing: 0.20em;
+	font-size: 20px;
+	margin-left: 8%;
+	margin-top: 4%;
+}
+
+#Galeria{
+margin-top:2%;
+margin-left:49%;
+}
+/*Gallery Container*/
+.image-gallery{
+  position:relative;  
+  margin:0 auto;
+  width:600px;  
+  border-radius:20px;  
+}
+/*Sets Big Image style*/
+.image-gallery .big-image{
+  width:600px;
+  height:360px;   
+  margin:32px 0 0 65px;  
+  position:relative;
+}
+.image-gallery .big-image img{
+  opacity:0;position:absolute;left:0px;top:0px; width:800px;
+  margin:0 auto;
+  transition: opacity 350ms;
+  box-shadow:0 1px 20px 1px rgba(0,0,0,0.7);
+}
+
+/*Selected image display*/
+.image-gallery .big-image img:target{opacity:1;}
+/*on select image display none the default image*/
+.image-gallery .big-image img:target ~ img#default{opacity:0;}
+
+/*Show Default Image in first load*/
+.image-gallery .big-image img#default{opacity:1;}
+
+
+/***Button***/
+.image-gallery .button{
+  font-weight:bold;
+  font-size:30px;
+  display:inline-block;
+  transform:scale(1,2);
+  background-color:#ccc;
+  color:#222;
+  padding:0 10px;   
+}
+.image-gallery .prev{position:absolute; left:129px; top:628px;}
+.image-gallery .next{position:absolute; right:-170px; top:628px;}
+
+/***move thumbs on click on buttons***/
+.image-gallery .prev:active ~ .thumbs  ul{
+  transform:translateX(0%);
+  transition:3s all;
+}
+.image-gallery  .next:active ~ .thumbs  ul{
+  transform:translateX(-90%);
+  transition:3s all;  
+}
+  
+/***thumbs***/
+.image-gallery .thumbs{
+  overflow:hidden; white-space:nowrap; margin:232px 184px;
+}
+.image-gallery .thumbs ul{
+  float:left; transition:999999s all; transform:translateX(0);
+}
+.image-gallery .thumbs li{display:inline-block; margin-right:3px;}
+.image-gallery .thumbs li a:hover{opacity:1;}
+.image-gallery .thumbs li a{opacity:0.85;}
+.image-gallery .thumbs li a:focus{opacity:1;}
+.image-gallery .thumbs li img{width:128px;}
+
+
+/*other styles*/
+.title{font-size:30px;font-weight:bold;text-align:center;margin:15px 0;
+text-shadow:1px 1px 2px #1f1f1f;}
+
+/*reset CSS*/
+*{font-family:arial;}
+ul,li{list-style:none;margin:0;padding:0;}

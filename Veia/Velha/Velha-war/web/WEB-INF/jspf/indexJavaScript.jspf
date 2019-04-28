@@ -1,0 +1,55 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script>
+    var winner = '${winner}';
+    var winnerPattern = '${winnerPattern}';
+    <c:if test="${number>=0}">
+    var number =${number};
+    </c:if>
+    function myFunction() {
+    <c:if test="${lastPcMove<9}">
+        //document.getElementById('n${lastPlayerMove}').innerHTML = "";
+        //document.getElementById('n${lastPlayerMove}').className= document.getElementById('n${lastPlayerMove}').className+' free';
+        document.getElementById('n${lastPcMove}').innerHTML = "";
+        document.getElementById('n${lastPcMove}').className = document.getElementById('n${lastPcMove}').className + ' free';
+        //setTimeout(playerMove, 5000);
+        setTimeout(computerMove, 500);
+    </c:if>
+        if ('${winner}' === 't' || '${winner}' === 'x' || '${winner}' === 'o') {
+            setTimeout(showWinner, 500);
+        }
+    }
+    function playerMove() {
+        document.getElementById('n${lastPlayerMove}').innerHTML = ('${player}' === 'x') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-circle-o"></i>';
+        document.getElementById('n${lastPlayerMove}').className = document.getElementById('n${lastPlayerMove}').className.replace('free', '');
+    }
+    function computerMove() {
+        document.getElementById('n${lastPcMove}').innerHTML = ('${player}' === 'o') ? '<i class="fa fa-times"></i>' : '<i class="fa fa-circle-o"></i>';
+        document.getElementById('n${lastPcMove}').className = document.getElementById('n${lastPcMove}').className.replace('free', '');
+    }
+    function showWinner() {
+        if (winnerPattern === 'r') {
+            document.getElementById('n' + (number*3)).className = document.getElementById('n' + (number*3)).className + ' win';
+            document.getElementById('n' + (number*3 + 1)).className = document.getElementById('n' + (number*3 + 1)).className + ' win';
+            document.getElementById('n' + (number*3 + 2)).className = document.getElementById('n' + (number*3 + 2)).className + ' win';
+        }
+        if (winnerPattern === 'c') {
+            document.getElementById('n' + (number)).className = document.getElementById('n' + (number)).className + ' win';
+            document.getElementById('n' + (number+3)).className = document.getElementById('n' + (number + 3)).className + ' win';
+            document.getElementById('n' + (number+ 6)).className = document.getElementById('n' + (number + 6)).className + ' win';
+        }
+        if (winnerPattern === 'd' && number === 1) {
+            document.getElementById('n0').className = document.getElementById('n0').className + ' win';
+            document.getElementById('n4').className = document.getElementById('n4').className + ' win';
+            document.getElementById('n8').className = document.getElementById('n8').className + ' win';
+        }
+        if (winnerPattern === 'd' && number === 2) {
+            document.getElementById('n2').className = document.getElementById('n2').className + ' win';
+            document.getElementById('n4').className = document.getElementById('n4').className + ' win';
+            document.getElementById('n6').className = document.getElementById('n6').className + ' win';
+        }
+        setTimeout(showWinner2, 500);
+    }
+    function showWinner2() {
+        document.getElementById('body').innerHTML = document.getElementById('body').innerHTML + '<style>.console{display: block;}.screen{display: block;}</style>';
+    }
+</script>

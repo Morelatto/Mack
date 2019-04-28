@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<title> Punk Blog </title>
+<style>
+span.reference{
+	position:fixed;
+	left:10px;
+	bottom:10px;
+	font-size:12px;
+				}
+span.reference a{
+	color:#aaa;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #000;
+	margin-right:30px;
+				}
+span.reference a:hover{
+	color:#ddd;
+					}
+ul.sdt_menu{
+	margin-left:15%;
+	margin-top:18%;
+			}
+</style>
+
+</head>
+<body>
+<header>
+<div>
+<img id="BackgroundTitulo" src="Imagem\BackgroundTitulo.jpg" alt="BackgroundTitulo" height="200">
+<img id="LogoAnarquia1" src="Imagem\LogoAnarquia.png" alt="LogoAnarquia1" width="150" height="150">
+<a href="index.html"><img id="Titulo" src="Imagem\Titulo.png" alt="Titulo"></a>
+<img id="LogoAnarquia2" src="Imagem\LogoAnarquia.png" alt="LogoAnarquia2" width="150" height="150">
+</div>
+</header>
+<div class="content">
+		<ul id="sdt_menu" class="sdt_menu">
+			<li>
+				<a href="index.html">
+					<img src="Imagem/2.jpeg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Home</span>
+						<span class="sdt_descr">Viva Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="musica.html">
+					<img src="Imagem/1.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Música</span>
+						<span class="sdt_descr">Ouça Punk Rock!</span>
+					</span>
+				</a>
+				<div class="sdt_box">
+						<a href="#">Bandas</a>
+						<a href="#">Gêneros</a>
+						<a href="#">História</a>
+				</div>
+			</li>
+			<li>
+				<a href="video.html">
+					<img src="Imagem/3.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Vídeo</span>
+						<span class="sdt_descr">Assista Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="galeria.html">
+					<img src="Imagem/4.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Galeria</span>
+						<span class="sdt_descr">Veja Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="show.html">
+					<img src="Imagem/5.jpeg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Shows</span>
+						<span class="sdt_descr">Presencie Punk Rock!</span>
+					</span>
+				</a>
+			</li>
+			<li>
+				<a href="contato.html">
+					<img src="Imagem/6.jpg" alt=""/>
+					<span class="sdt_active"></span>
+					<span class="sdt_wrap">
+						<span class="sdt_link">Contato</span>
+						<span class="sdt_descr">Nos mostre Punk Rock!</span>
+					</span>
+				</a>
+				<div class="sdt_box">
+					<a href="#">Mande sua Banda</a>
+					<a href="#">Mande uma sugestão</a>
+					<a href="#">Informe um problema</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#sdt_menu > li').bind('mouseenter',function(){
+				var $elem = $(this);
+				$elem.find('img')
+					 .stop(true)
+					 .animate({
+						'width':'170px',
+						'height':'170px',
+						'left':'0px'
+					 },400,'easeOutBack')
+					 .andSelf()
+					 .find('.sdt_wrap')
+					 .stop(true)
+					 .animate({'top':'140px'},500,'easeOutBack')
+					 .andSelf()
+					 .find('.sdt_active')
+					 .stop(true)
+					 .animate({'height':'170px'},300,function(){
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length){
+						var left = '170px';
+						if($elem.parent().children().length == $elem.index()+1)
+							left = '-170px';
+						$sub_menu.show().animate({'left':left},200);
+					}	
+				});
+			}).bind('mouseleave',function(){
+				var $elem = $(this);
+				var $sub_menu = $elem.find('.sdt_box');
+				if($sub_menu.length)
+					$sub_menu.hide().css('left','0px');
+				
+				$elem.find('.sdt_active')
+					 .stop(true)
+					 .animate({'height':'0px'},300)
+					 .andSelf().find('img')
+					 .stop(true)
+					 .animate({
+						'width':'0px',
+						'height':'0px',
+						'left':'85px'},400)
+					 .andSelf()
+					 .find('.sdt_wrap')
+					 .stop(true)
+					 .animate({'top':'25px'},500);
+			});
+		});
+	</script>
+	<img id="Galeria"src="Imagem/Galeria.png" alt=""/>
+<div class="image-gallery">  
+  <div class="big-image">           
+    <img id="image1" src="Imagem/SexPistols2.jpg" />
+    <img id="image2" src="Imagem/TheClash2.jpg" />
+    <img id="image3" src="Imagem/DeadKennedys.jpg" />
+    <img id="image4" src="Imagem/MinorThreat.jpeg" />
+    <img id="image5" src="Imagem/BadReligion.jpg" />
+    <img id="image6" src="Imagem/Iggy&TheStooges.jpg" />
+    <img id="image7" src="Imagem/TheMisfits.jpg" />
+    <img id="image8" src="Imagem/TheRamones.jpg" />
+    <img id="image9" src="Imagem/MC52.jpg" />
+    <img id="image10" src="Imagem/Discharge.jpg" />
+    <img id="image11" src="Imagem/ManIsTheBastard2.jpg" />
+    <img id="image12" src="Imagem/RichardHell&TheVoidoids.jpg" />
+    <img id="image13" src="Imagem/Rancid.jpg" />
+    <img id="image14" src="Imagem/TheDamned.png" />
+    <img id="image15" src="Imagem/TheMinutemen.png" />
+    <img id="image16" src="Imagem/StiffLittleFingers.jpg" />
+    
+    <img id="default" src="Imagem/SexPistols2.jpg" />
+  </div>  
+  
+  
+  <a class="button prev"><</a>
+  <a class="button next">></a>  
+<div class="thumbs" style="height: 174px; width: 525px;">    <ul>    
+    <li>
+      <a href="#image1"><img  src="Imagem/SexPistols2.jpg" /></a></li>
+    <li>
+      <a href="#image2"><img  src="Imagem/TheClash2.jpg" /></a>
+    </li>
+    <li>    <li>
+      <a href="#image3"><img  src="Imagem/DeadKennedys.jpg" /></a>
+    </li>    <li>
+      <a href="#image4"><img  src="Imagem/MinorThreat.jpeg" /></a>
+    </li>    <li>
+      <a href="#image5"><img  src="Imagem/BadReligion.jpg" /></a>
+    </li>    <li>
+      <a href="#image6"><img  src="Imagem/Iggy&TheStooges.jpg" /></a>
+    </li>    <li>
+      <a href="#image7"><img  src="Imagem/TheMisfits.jpg" /></a>
+    </li>    <li>
+      <a href="#image8"><img  src="Imagem/TheRamones.jpg" /></a>
+    </li>    <li>
+      <a href="#image9"><img  src="Imagem/MC52.jpg" /></a>
+    </li>    <li>
+      <a href="#image10"><img  src="Imagem/Discharge.jpg" /></a>
+    </li>    <li>
+      <a href="#image11"><img  src="Imagem/ManIsTheBastard2.jpg" /></a>
+    </li>    <li>
+      <a href="#image12"><img  src="Imagem/RichardHell&TheVoidoids.jpg" /></a>
+    </li>    <li>
+      <a href="#image13"><img  src="Imagem/Rancid.jpg" /></a>
+    </li>    <li>
+      <a href="#image14"><img  src="Imagem/TheDamned.png" /></a>
+    </li>    <li>
+      <a href="#image15"><img  src="Imagem/TheMinutemen.png" /></a>
+    </li>    <li>
+      <a href="#image16"><img  src="Imagem/StiffLittleFingers.jpg" /></a>
+    </li> 
+  </ul>
+  </div>
+</div>  
+
+<footer>
+<div id="Footer" style="margin-top:-25%;">
+<p>
+LUÍS TESSARO | PEDRO MORELATTO @ TODOS OS DIREITOS RESERVADOS.
+</p>
+</div>
+</footer>
+</body>
+
+</html>
